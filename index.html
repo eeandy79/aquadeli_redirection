@@ -2,7 +2,12 @@
 <html>
 <head>
 <script>
-  location.replace("https://order.ecorder.net/?r=abbe6c7c-58d2-42d7-aee7-c18f3ab0e8e7&o=TA")
+  var domain = /:\/\/([^\/]+)/.exec(window.location.href)[1];
+  var restaurantId = "abbe6c7c-58d2-42d7-aee7-c18f3ab0e8e7";
+  if (domain === "aquadeli-store") {
+     restaurantId = "364a5cfa-152f-49b5-8699-177cac1f5684";
+  }
+  location.replace("https://order.ecorder.net/?r=" + restaurantId + "&o=TA")
 </script>
 </head>
 <body />
